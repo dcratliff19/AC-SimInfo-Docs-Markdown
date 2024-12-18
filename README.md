@@ -47,7 +47,7 @@ try:
         'apps/python/third_party', sysdir))
     os.environ['PATH'] += ";."
 except Exception as e:
-    ac.log("[ACRL] Error importing libraries: %s" % e)
+    ac.log("[ERROR] Error importing libraries: %s" % e)
 
 from sim_info import info
 
