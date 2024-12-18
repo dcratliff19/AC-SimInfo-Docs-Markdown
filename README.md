@@ -319,31 +319,6 @@ print(info.graphics.carCoordinates)
 ```
 ---
 
-### SPageFileStatic
-Contains static information such as track, car model, and player details.
-```python
-class SPageFileStatic(ctypes.Structure):
-    _pack_ = 4
-    _fields_ = [
-        ('_smVersion', c_wchar * 15),
-        ('_acVersion', c_wchar * 15),
-        ('numberOfSessions', c_int32),
-        ('numCars', c_int32),
-        ('carModel', c_wchar * 33),
-        ('track', c_wchar * 33),
-        ('playerName', c_wchar * 33),
-        ('playerSurname', c_wchar * 33),
-        ('playerNick', c_wchar * 33),
-        ('sectorCount', c_int32),
-        ('maxTorque', c_float),
-        ('maxPower', c_float),
-        ('maxRpm', c_int32),
-        ('maxFuel', c_float),
-        ('suspensionMaxTravel', c_float * 4),
-        ('tyreRadius', c_float * 4),
-    ]
-```
-
 ### Using the Mapped Data Structures
 
 Once the memory regions are mapped into the Python structures, you can access the simulation data like regular Python objects.
