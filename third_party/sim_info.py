@@ -103,7 +103,6 @@ class SPageFileGraphic(ctypes.Structure):
         ('lastSectorTime', c_int32),
         ('numberOfLaps', c_int32),
         ('tyreCompound', c_wchar * 33),
-
         ('replayTimeMultiplier', c_float),
         ('normalizedCarPosition', c_float),
         ('carCoordinates', c_float * 3),
