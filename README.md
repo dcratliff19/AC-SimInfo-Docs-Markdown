@@ -84,23 +84,22 @@ class SPageFileStatic(ctypes.Structure):
 ```
 
 #### Field Breakdown:
-- **`smVersion[15]`**: Version of the Shared Memory structure.
-- **`acVersion[15]`**: Version of Assetto Corsa.
-- **`numberOfSessions = 0`**: Number of sessions in this instance.
-- **`numCars = 0`**: Max number of possible cars on track.
-- **`carModel[33]`**: Name of the player’s car.
-- **`track[33]`**: Name of the track.
-- **`playerName[33]`**: Name of the player.
-- **`playerSurname[33]`**: Surname of the player.
-- **`playerNick[33]`**: Nickname of the player.
-- **`sectorCount = 0`**: Number of track sectors.
-- **`maxTorque = 0`**: Max torque value of the player’s car.
-- **`maxPower = 0`**: Max power value of the player’s car.
-- **`maxRpm = 0`**: Max rpm value of the player’s car.
-- **`maxFuel = 0`**: Max fuel value of the player’s car.
-- **`suspensionMaxTravel[4]`**: Max travel distance of each tyre [Front Left, Front Right, Rear Left, Rear Right].
-- **`tyreRadius[4]`**: Radius of each tyre [Front Left, Front Right, Rear Left, Rear Right].
-
+- **`smVersion[15]`** (`wchar_t`): Version of the Shared Memory structure.
+- **`acVersion[15]`** (`wchar_t`): Version of Assetto Corsa.
+- **`numberOfSessions`** (`int`): Number of sessions in this instance.
+- **`numCars`** (`int`): Max number of possible cars on track.
+- **`carModel[33]`** (`wchar_t`): Name of the player’s car.
+- **`track[33]`** (`wchar_t`): Name of the track.
+- **`playerName[33]`** (`wchar_t`): Name of the player.
+- **`playerSurname[33]`** (`wchar_t`): Surname of the player.
+- **`playerNick[33]`** (`wchar_t`): Nickname of the player.
+- **`sectorCount`** (`int`): Number of track sectors.
+- **`maxTorque`** (`float`): Max torque value of the player’s car.
+- **`maxPower`** (`float`): Max power value of the player’s car.
+- **`maxRpm`** (`int`): Max rpm value of the player’s car.
+- **`maxFuel`** (`float`): Max fuel value of the player’s car.
+- **`suspensionMaxTravel[4]`** (`float`): Max travel distance of each tyre [Front Left, Front Right, Rear Left, Rear Right].
+- **`tyreRadius[4]`** (`float`): Radius of each tyre [Front Left, Front Right, Rear Left, Rear Right].
 
 #### Example Usage:
 
