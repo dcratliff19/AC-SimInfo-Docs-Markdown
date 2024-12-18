@@ -76,3 +76,39 @@ class SPageFilePhysics(ctypes.Structure):
         ('abs', c_float),
     ]
 ```
+### SPageFileStatic
+Contains static information such as track, car model, and player details.
+```python
+class SPageFileStatic(ctypes.Structure):
+    _pack_ = 4
+    _fields_ = [
+        ('_smVersion', c_wchar * 15),
+        ('_acVersion', c_wchar * 15),
+        ('numberOfSessions', c_int32),
+        ('numCars', c_int32),
+        ('carModel', c_wchar * 33),
+        ('track', c_wchar * 33),
+        ('playerName', c_wchar * 33),
+        ('playerSurname', c_wchar * 33),
+        ('playerNick', c_wchar * 33),
+        ('sectorCount', c_int32),
+        ('maxTorque', c_float),
+        ('maxPower', c_float),
+        ('maxRpm', c_int32),
+        ('maxFuel', c_float),
+        ('suspensionMaxTravel', c_float * 4),
+        ('tyreRadius', c_float * 4),
+    ]
+```
+
+### Usage
+```python
+from sim_info import info
+
+# Access simulation data
+print(info.graphics.tyreCompound)  # Current tire compound
+print(info.physics.rpms)  # Engine RPM
+print(info.static.playerNick)  # Player's nickname
+```
+
+```
