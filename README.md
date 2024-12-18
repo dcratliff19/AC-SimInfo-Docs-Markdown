@@ -315,11 +315,6 @@ class SPageFileStatic(ctypes.Structure):
     ]
 ```
 
-## The sim_info Module
-
-The `sim_info` module contains the shared memory structures that will allow you to access the data.
-
-
 ### Accessing sim_info attributes:
 1. **`self._acpmf_physics`**: This is a memory-mapped file that corresponds to the physics data in Assetto Corsa. It is mapped using the `mmap.mmap()` function and represents the simulation's physics data in memory.
 
