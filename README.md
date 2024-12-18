@@ -9,10 +9,10 @@ Before using this, ensure that `_ctypes.pyd` is available somewhere in the Pytho
 ## Folder Structure Example
 
 Here’s an example of how the folder structure should look for the application:
-some_app
-    DLLs
-        _ctypes.pyd
-    some_app.py
+some_app/
+├── DLLs/
+│   └── _ctypes.pyd
+└── some_app.py
 
 
 ### Code Example (some_app.py)
